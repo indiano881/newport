@@ -1,8 +1,35 @@
 <template>
-    <div class="flex flex-col items-center">
-        <div>
-            <p class="text-5xl">Projects</p>
-        </div>
-
-    </div>
-</template>
+    <section class="py-16 px-4 max-w-7xl mx-auto">
+      <!-- Section Title -->
+      <div class="text-center mb-12">
+        <h2 class="text-5xl font-bold text-gray-900 mb-2">Projects</h2>
+        <p class="text-gray-500 text-lg">A showcase of my latest work</p>
+      </div>
+  
+      <!-- Responsive Card Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <ProjectC
+          title="Parking Time"
+          description="With this project I arrived first"
+          image="/projects/parking.png"
+          link="https://parkingtime.se"
+        />
+        <ProjectC
+          title="Nuxtermind"
+          description="Web sockets on steroids for a real time game!"
+          image="/projects/mastermind.png"
+        />
+        <ProjectC
+          title="Mem App"
+          description="To do list for people with memory problems!"
+          image="/projects/mem.png"
+        />
+        <ProjectC
+          title="Economic UI"
+          description="A clean and intuitive dashboard for small businesses."
+          image="/projects/economic.png"
+        />
+      </div>
+    </section>
+  </template>
+  

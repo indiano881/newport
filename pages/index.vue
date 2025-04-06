@@ -40,7 +40,7 @@
       >
         My Resume
         <img
-          src="/davide.png"
+          src="/down.svg"
           alt="resume icon"
           width="20"
           height="20"
@@ -48,6 +48,7 @@
         />
       </a>
     </div>
+    
 
   </main>
   
