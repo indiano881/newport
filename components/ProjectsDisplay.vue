@@ -14,20 +14,13 @@
         :title="project.title"
         :description="project.description"
         :image="`/projects/${project.image}`"
-        @click="goToProject(project.slug)"
+        :slug="project.slug"
+        
       />
     </div>
   </section>
 </template>
 
 <script setup>
-import { useRouter } from 'vue-router'
-import ProjectC from '@/components/ProjectC.vue'
-import { projects } from '@/utils/data.js' // update path as needed
 
-const router = useRouter()
-
-const goToProject = (slug) => {
-  router.push(`/projects/${slug}`)
-}
 </script>

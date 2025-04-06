@@ -26,7 +26,7 @@
       <!-- JS-triggered download button -->
       <button
         @click="downloadPDF"
-        class="text-black px-8 py-3 border rounded-full  border-gray-500 flex items-center gap-2 hover:bg-gray-100 transition duration-300 dark:text-black dark:border-white dark:hover:bg-gray-800 dark:hover:text-white bg-white"
+        class="text-black px-8 py-3 border rounded-full  border-black flex items-center gap-2 hover:bg-gray-100 transition duration-300 dark:text-black dark:border-white dark:hover:bg-gray-800 dark:hover:text-white bg-white"
       >
         Download CV
       </button>
@@ -36,7 +36,7 @@
         href="/cv.pdf"
         target="_blank"
         rel="noopener noreferrer"
-        class="px-8 py-3 border rounded-full text-black border-gray-500 flex items-center gap-2 hover:bg-gray-100 transition duration-300 dark:text-black dark:border-white dark:hover:bg-gray-800 dark:hover:text-white bg-white group"
+        class="px-8 py-3 border rounded-full text-black border-black flex items-center gap-2 hover:bg-gray-100 transition duration-300 dark:text-black dark:border-white dark:hover:bg-gray-800 dark:hover:text-white bg-white group"
       >
         My Resume
         <img

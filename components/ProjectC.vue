@@ -33,7 +33,7 @@
           {{ description }}
         </p>
         <button
-          @click="goToProject"
+          @click="goToProject(slug)"
           class="bg-white text-black px-3 py-1 rounded-lg text-sm hover:bg-gray-200 transition"
         >
           Go to Project
@@ -67,7 +67,7 @@ const props = defineProps({
   }
 })
 
-const goToProject = () => {
-  router.push(`/projects/${props.slug}`)
+const goToProject = (slug) => {
+  router.push(`/projects/${slug}`)
 }
 </script>
