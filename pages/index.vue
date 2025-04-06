@@ -1,5 +1,5 @@
 <template>
-    <main class="flex flex-col items-center justify-center min-h-[600px] px-6  space-y-8 text-center text-gray-800 dark:text-white">
+    <main class="flex flex-col items-center justify-center min-h-[600px] px-6  space-y-8 text-center text-gray-800 dark:text-white ">
     
     <!-- Profile Image -->
     <NuxtImg
@@ -10,13 +10,13 @@
 
     <!-- Introduction Text -->
     <div class="flex flex-col space-y-4 max-w-2xl">
-      <p class="text-xl font-semibold">Hello! It’s-a me, Davide 👋</p>
-      <p class="text-lg">Software engineer based in Stockholm</p>
+      <p class="text-xl font-semibold text-black">Hello! It’s-a me, Davide 👋</p>
+      <p class="text-lg text-black">Software engineer based in Stockholm</p>
       <p class="bg-slate-400 text-white px-4 py-2 rounded-md">
         I love to find solutions to complex IT problems!
       </p>
-      <p class="text-lg">My expertise</p>
-      <p class="text-base leading-relaxed">
+      <p class="text-lg text-black">My expertise</p>
+      <p class="text-base leading-relaxed text-black">
         Web development, frontend engineering and optimization, cloud integrations, and strong knowledge of SQL and data analytics.
       </p>
     </div>
@@ -26,7 +26,7 @@
       <!-- JS-triggered download button -->
       <button
         @click="downloadPDF"
-        class="px-8 py-3 border rounded-full text-gray-700 border-gray-500 flex items-center gap-2 hover:bg-gray-100 transition duration-300 dark:text-black dark:border-white dark:hover:bg-gray-800 dark:hover:text-white bg-white"
+        class="text-black px-8 py-3 border rounded-full  border-gray-500 flex items-center gap-2 hover:bg-gray-100 transition duration-300 dark:text-black dark:border-white dark:hover:bg-gray-800 dark:hover:text-white bg-white"
       >
         Download CV
       </button>
@@ -36,7 +36,7 @@
         href="/cv.pdf"
         target="_blank"
         rel="noopener noreferrer"
-        class="px-8 py-3 border rounded-full text-gray-700 border-gray-500 flex items-center gap-2 hover:bg-gray-100 transition duration-300 dark:text-black dark:border-white dark:hover:bg-gray-800 dark:hover:text-white bg-white group"
+        class="px-8 py-3 border rounded-full text-black border-gray-500 flex items-center gap-2 hover:bg-gray-100 transition duration-300 dark:text-black dark:border-white dark:hover:bg-gray-800 dark:hover:text-white bg-white group"
       >
         My Resume
         <img
