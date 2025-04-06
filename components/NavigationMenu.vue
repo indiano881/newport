@@ -25,8 +25,7 @@ onBeforeUnmount(() => {
   window.removeEventListener('resize', getWindowWidth)
 })
 
-// Computed property to check if the user is logged in
-const isLoggedIn = computed(() => user.value !== null)
+
 </script>
 
 <template>
@@ -52,21 +51,22 @@ const isLoggedIn = computed(() => user.value !== null)
             <NuxtLink href="/" @click="closeMenu">Home</NuxtLink>
           </li>
           <li class="n1 p-2 md:pr-4">
-            <NuxtLink href="/about" @click="closeMenu"
-              >About me</NuxtLink
-            >
-          <li class="n1 p-2 md:pr-4">
             <NuxtLink href="/projects" @click="closeMenu"
               >Projects</NuxtLink
             >
           </li>
+          <li class="n1 p-2 md:pr-4">
+            <NuxtLink href="/about" @click="closeMenu"
+              >About me</NuxtLink
+            >
+         
           
           </li>
-          <li class="n1 mt-2 pb-2 xl:mt-0 xl:p-2 xl:pr-4">
+          <li class="n1 p-2 md:pr-4">
             <NuxtLink
               href="/contact"
               @click="closeMenu"
-              class="mx-2 rounded-xl border-2 border-white bg-green-500 pr-1 transition duration-300 hover:bg-green-600"
+              
               >Contact me</NuxtLink
             >
           </li>
@@ -80,6 +80,11 @@ const isLoggedIn = computed(() => user.value !== null)
 </template>
 
 <style scoped>
+* {
+  font-family: 'Outfit';
+  font-weight: bold;
+  
+}
 .header {
   align-items: center;
   position: sticky;
@@ -88,8 +93,7 @@ const isLoggedIn = computed(() => user.value !== null)
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: space-between;
-  
-  color: blue;
+  color: black;
   z-index: 50;
 }
 img {
@@ -161,6 +165,8 @@ img {
   padding: 50px;
   width: calc(100%);
   height: calc(100vh);
+  background-color: #94a3b8;
+  color: white;
   
 }
 .nav.sp-menu .nav__list {
