@@ -1,9 +1,9 @@
 <template>
-    <main class="flex flex-col items-center justify-center min-h-[1000px] px-6 py-12 space-y-10 text-center text-gray-800 dark:text-white">
+    <main class="flex flex-col items-center justify-center min-h-[600px] px-6  space-y-8 text-center text-gray-800 dark:text-white">
     
     <!-- Profile Image -->
     <NuxtImg
-      src="/davide.png"
+      src="/projects/gamer.png"
       alt="Davide Baldi"
       class="rounded-full w-32 h-32 object-cover mt-12"
     />
@@ -50,8 +50,10 @@
     </div>
 
   </main>
+  
     <ProjectsDisplay />
     <MyStory />
+
     
 </template>
 <script setup>
