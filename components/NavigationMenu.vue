@@ -33,6 +33,7 @@ onBeforeUnmount(() => {
       class="menu-button"
       :class="{ open: menuOpen }"
       @click="menuOpen = !menuOpen"
+      aria-label="hamburger menu"
     >
       <span class="menu-button__bar menu-button__bar--top"></span>
       <span class="menu-button__bar menu-button__bar--center"></span>
@@ -40,7 +41,7 @@ onBeforeUnmount(() => {
     </button>
     <transition name="fade">
       <nav v-show="menuOpen" class="nav" :class="{ 'sp-menu': buttonShow }">
-        <ul class="flex flex-col xl:flex-row">
+        <ul class="flex flex-col xl:flex-row text-2xl">
           <li class="n1 p-2 md:pr-4">
             <NuxtLink href="/" @click="closeMenu">Home</NuxtLink>
           </li>

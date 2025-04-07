@@ -1,9 +1,5 @@
 <template>
   <div v-if="project" class="p-6 max-w-4xl mx-auto space-y-6">
-    <h1 class="text-5xl font-extrabold text-center text-black uppercase">
-      Page Under Construction
-    </h1>
-
     <div class="text-center">
       <h2 class="text-4xl font-bold mb-2">{{ project.title }}</h2>
       <p class="text-lg text-gray-600 italic">{{ project.subtitle }}</p>
@@ -12,17 +8,17 @@
     <img
       :src="project.image"
       :alt="project.title"
-      class="w-full rounded-lg shadow-lg object-cover"
+      class="w-full rounded-lg shadow-lg object-cover border-black border-2"
     />
 
     <div class="space-y-4">
-      <h3 class="text-2xl font-semibold">Description</h3>
+      <h3 class="text-2xl font-semibold text-black">Description</h3>
       <p class="text-gray-700">{{ project.description }}</p>
 
-      <h3 class="text-2xl font-semibold">Content</h3>
+      <h3 class="text-2xl font-semibold text-black">Content</h3>
       <p class="text-gray-700">{{ project.content }}</p>
 
-      <h3 class="text-2xl font-semibold">Tech Stack</h3>
+      <h3 class="text-2xl font-semibold text-black">Tech Stack</h3>
       <p class="text-gray-800">
         <span
           class="bg-gray-200 text-gray-800 px-2 py-1 rounded-md mr-2"
@@ -54,6 +50,15 @@
 
   <div v-else class="text-center text-red-500 mt-20">
     <h2 class="text-2xl font-bold">Project not found</h2>
+  </div>
+  <div class="pt-6">
+    <button
+      @click="$router.push('/projects')"
+      class="bg-gray-800 text-white px-4 py-2 rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
+      aria-label="Back to Projects"
+    >
+      ← Back to Projects
+    </button>
   </div>
 </template>
 

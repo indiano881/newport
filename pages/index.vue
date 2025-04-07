@@ -31,6 +31,7 @@
       <button
         @click="downloadPDF"
         class="text-black min-w-[190px] px-8 py-3 border-2 rounded-full border-black flex items-center gap-2 hover:bg-gray-100 transition duration-300 dark:text-black dark:border-white dark:hover:bg-gray-800 dark:hover:text-white bg-white text-center"
+        aria-label="check my resume"
       >
         Check my resume
       </button>
@@ -41,6 +42,7 @@
         target="_blank"
         rel="noopener noreferrer"
         class="px-8 py-3 border-2 rounded-full text-black border-black flex items-center gap-2 hover:bg-gray-100 transition duration-300 dark:text-black dark:border-white dark:hover:bg-gray-800 dark:hover:text-white bg-white group"
+        aria-label="download my resume"
       >
         Download CV
         <img
