@@ -51,23 +51,23 @@ const router = useRouter()
 const props = defineProps({
   image: {
     type: String,
-    required: true
+    required: true,
   },
   title: {
     type: String,
-    required: true
+    required: true,
   },
   description: {
     type: String,
-    default: 'This is a short project description.'
+    default: 'This is a short project description.',
   },
   slug: {
     type: String,
-    required: true
-  }
+    required: true,
+  },
 })
 
-const goToProject = (slug) => {
+const goToProject = slug => {
   router.push(`/projects/${slug}`)
 }
 </script>

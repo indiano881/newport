@@ -1,3 +1,3 @@
 <template>
-    <MyStory />
+  <MyStory />
 </template>

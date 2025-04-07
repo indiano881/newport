@@ -1,5 +1,4 @@
 <script setup>
-
 const windowWidth = ref('')
 const menuOpen = ref(false)
 const buttonShow = ref(false)
@@ -24,16 +23,11 @@ onMounted(() => {
 onBeforeUnmount(() => {
   window.removeEventListener('resize', getWindowWidth)
 })
-
-
 </script>
 
 <template>
   <header class="header">
-    <div class="flex">
-      
-    
-    </div>
+    <div class="flex"></div>
     <button
       v-show="buttonShow"
       class="menu-button"
@@ -51,28 +45,14 @@ onBeforeUnmount(() => {
             <NuxtLink href="/" @click="closeMenu">Home</NuxtLink>
           </li>
           <li class="n1 p-2 md:pr-4">
-            <NuxtLink href="/projects" @click="closeMenu"
-              >Projects</NuxtLink
-            >
+            <NuxtLink href="/projects" @click="closeMenu">Projects</NuxtLink>
           </li>
           <li class="n1 p-2 md:pr-4">
-            <NuxtLink href="/about" @click="closeMenu"
-              >About me</NuxtLink
-            >
-         
-          
+            <NuxtLink href="/about" @click="closeMenu">About me</NuxtLink>
           </li>
           <li class="n1 p-2 md:pr-4">
-            <NuxtLink
-              href="/contact"
-              @click="closeMenu"
-              
-              >Contact me</NuxtLink
-            >
+            <NuxtLink href="/contact" @click="closeMenu">Contact me</NuxtLink>
           </li>
-          
-         
-          
         </ul>
       </nav>
     </transition>
@@ -83,7 +63,6 @@ onBeforeUnmount(() => {
 * {
   font-family: 'Outfit';
   font-weight: bold;
-  
 }
 .header {
   align-items: center;
@@ -167,7 +146,6 @@ img {
   height: calc(100vh);
   background-color: #94a3b8;
   color: white;
-  
 }
 .nav.sp-menu .nav__list {
   display: flex;

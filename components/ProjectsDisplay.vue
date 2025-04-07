@@ -15,12 +15,9 @@
         :description="project.description"
         :image="`/projects/${project.image}`"
         :slug="project.slug"
-        
       />
     </div>
   </section>
 </template>
 
-<script setup>
-
-</script>
+<script setup></script>
