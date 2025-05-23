@@ -1,5 +1,11 @@
 export const certifications = [
   {
+    title: 'GCP Professional Data Engineer',
+    image: 'pda.png',
+    number: 'd3d66675403b4d39abb782b77c1d1884',
+    expiration: '2027-05-21',
+  },
+  {
     title: 'GCP Associate Data Practitioner',
     image: 'acedata.png',
     number: '39e37beef025441f8bbb6bbc40821a06',
