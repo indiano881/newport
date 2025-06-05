@@ -1,18 +1,59 @@
+<script setup>
+import { ref } from 'vue'
+
+const name = ref('')
+const email = ref('')
+const message = ref('')
+
+const isSubmitting = ref(false)
+const isSuccess = ref(false)
+const isError = ref(false)
+
+const handleSubmit = async (e) => {
+  e.preventDefault()
+  isSubmitting.value = true
+  isSuccess.value = false
+  isError.value = false
+
+  try {
+    const response = await fetch('https://formspree.io/f/meokovly', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: name.value,
+        email: email.value,
+        message: message.value,
+      }),
+    })
+
+    if (response.ok) {
+      isSuccess.value = true
+      name.value = ''
+      email.value = ''
+      message.value = ''
+    } else {
+      isError.value = true
+    }
+  } catch (err) {
+    isError.value = true
+  } finally {
+    isSubmitting.value = false
+  }
+}
+</script>
+
 <template>
   <div
     class="min-h-screen bg-gray-100 flex flex-col items-center justify-center px-4 py-12"
   >
-    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-2">Contact</h1>
+    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-2">Contact me</h1>
 
     <div class="bg-white w-full max-w-lg shadow-xl rounded-2xl p-8">
-      <form
-        action="https://formspree.io/f/meokovly"
-        method="POST"
-        class="space-y-6"
-      >
+      <form @submit="handleSubmit" class="space-y-6">
         <div>
           <label class="block text-gray-700 font-medium mb-1">Your Name</label>
           <input
+            v-model="name"
             type="text"
             name="name"
             required
@@ -23,6 +64,7 @@
         <div>
           <label class="block text-gray-700 font-medium mb-1">Your Email</label>
           <input
+            v-model="email"
             type="email"
             name="email"
             required
@@ -35,6 +77,7 @@
             >Your Message</label
           >
           <textarea
+            v-model="message"
             name="message"
             required
             rows="5"
@@ -44,10 +87,15 @@
 
         <button
           type="submit"
-          class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-200"
+          :disabled="isSubmitting"
+          class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-200 flex justify-center items-center"
         >
-          Send Message
+          <span v-if="isSubmitting">Sending...</span>
+          <span v-else>Send Message</span>
         </button>
+
+        <p v-if="isSuccess" class="text-green-600 mt-4">Message sent successfully!</p>
+        <p v-if="isError" class="text-red-600 mt-4">Something went wrong. Try again.</p>
       </form>
     </div>
   </div>
