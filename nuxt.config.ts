@@ -6,6 +6,10 @@ export default defineNuxtConfig({
   css: ['@/assets/css/main.css'],
   app: {
     head: {
+      title: "Hi! I am Davide",
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }
+      ],
       script: [
         {
           src: 'https://www.googletagmanager.com/gtag/js?id=G-V2ZKF6F00E',
