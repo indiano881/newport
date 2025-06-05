@@ -3,13 +3,10 @@
     class="min-h-screen bg-gray-100 flex flex-col items-center justify-center px-4 py-12"
   >
     <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-2">Contact</h1>
-    <h2 class="text-xl text-gray-600 mb-8">
-      This page is under construction 🚧
-    </h2>
 
     <div class="bg-white w-full max-w-lg shadow-xl rounded-2xl p-8">
       <form
-        action="https://formspree.io/f/your_form_id"
+        action="https://formspree.io/f/meokovly"
         method="POST"
         class="space-y-6"
       >
