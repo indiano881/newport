@@ -4,4 +4,24 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxt/image', '@nuxtjs/tailwindcss', '@nuxt/icon'],
   css: ['@/assets/css/main.css'],
+  app: {
+    head: {
+      script: [
+        {
+          src: 'https://www.googletagmanager.com/gtag/js?id=G-V2ZKF6F00E',
+          async: true
+        },
+        {
+          children: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-V2ZKF6F00E');
+          `,
+          type: 'text/javascript'
+        }
+      ]
+    }
+  }
 })
+
