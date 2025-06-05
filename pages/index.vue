@@ -6,7 +6,7 @@
     <NuxtImg
       src="/projects/gamer.png"
       alt="Davide Baldi"
-      class="rounded-full w-32 h-32 object-cover mt-12"
+      class="rounded-full w-32 h-32 md:w-72 md:h-72 object-cover mt-12"
     />
 
     <!-- Introduction Text -->
@@ -15,7 +15,7 @@
         Hello! It’s a me, Davide 👋
       </p>
       <p class="text-lg text-black">Software engineer based in Stockholm</p>
-      <p class="bg-slate-400 text-white px-4 py-2 rounded-md">
+      <p class="bg-[#05A7F2] text-white px-4 py-2 rounded-md text-2xl border-black border-2">
         I love to find solutions to complex IT problems!
       </p>
       <p class="text-lg text-black font-semibold">My expertise</p>
@@ -91,7 +91,7 @@ const downloadPDF = () => {
   min-width: 190px;
   border: 2px solid black;
   border-radius: 9999px; /* Full rounded */
-  background-color: white;
+  background-color: #a5e5f7;
   color: black;
   text-align: center;
   cursor: pointer;
@@ -102,7 +102,7 @@ const downloadPDF = () => {
 }
 
 .custom-button:hover {
-  background-color: #f5f5f5; /* Light gray */
+  background-color: #05A7F2; /* Light gray */
 }
 
 @media (prefers-color-scheme: dark) {
