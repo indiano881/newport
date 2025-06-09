@@ -6,14 +6,12 @@ export default defineNuxtConfig({
   css: ['@/assets/css/main.css'],
   app: {
     head: {
-      title: "Hi! I am Davide",
-      link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }
-      ],
+      title: 'Hi! I am Davide',
+      link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }],
       script: [
         {
           src: 'https://www.googletagmanager.com/gtag/js?id=G-V2ZKF6F00E',
-          async: true
+          async: true,
         },
         {
           children: `
@@ -22,10 +20,9 @@ export default defineNuxtConfig({
             gtag('js', new Date());
             gtag('config', 'G-V2ZKF6F00E');
           `,
-          type: 'text/javascript'
-        }
-      ]
-    }
-  }
+          type: 'text/javascript',
+        },
+      ],
+    },
+  },
 })
-
