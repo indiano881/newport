@@ -1,12 +1,11 @@
 <template>
   <main
-    class="flex flex-col items-center justify-center min-h-[600px] h-full px-6 space-y-8 text-center text-gray-800 dark:text-white "
+    class="flex flex-col items-center justify-center min-h-[600px] h-full px-6 space-y-8 text-center text-gray-800 dark:text-white"
   >
     <!-- Profile Image -->
     <div
       class="relative mt-12 w-32 h-32 md:w-72 md:h-72"
-      @mousemove="handleMouseMove"
-      ref="faceRef"
+      :style="{ transform: `rotate(${-eyeOffsetX * 2}deg)` }"
     >
       <!-- Face image -->
       <NuxtImg
@@ -20,6 +19,7 @@
         src="/hero/iris.svg"
         alt="Left Iris"
         class="absolute w-1 h-1 md:w-2 md:h-2 top-[40%] left-[42%]"
+        :style="{ transform: `translate(${eyeOffsetX}px, ${eyeOffsetY}px)` }"
       />
 
       <!-- Iris 2 (right eye) -->
@@ -27,6 +27,7 @@
         src="/hero/iris.svg"
         alt="Right Iris"
         class="absolute w-1 h-1 md:w-2 md:h-2 top-[40%] right-[42%]"
+        :style="{ transform: `translate(${eyeOffsetX}px, ${eyeOffsetY}px)` }"
       />
     </div>
 
@@ -83,50 +84,51 @@
   <MyStory />
 </template>
 <script setup>
+const eyeOffsetX = ref(0)
+const eyeOffsetY = ref(0)
+
+const MAX_EYE_X = 2 // Maximum horizontal movement (px)
+const MAX_EYE_Y = 5 // Maximum vertical movement (px)
+
+const handleMouseMove = e => {
+  const centerX = window.innerWidth / 2
+  const centerY = window.innerHeight / 2
+
+  const offsetX = e.clientX - centerX
+  const offsetY = e.clientY - centerY
+
+  const ratio = 0.015 // Adjust sensitivity
+
+  eyeOffsetX.value = clamp(offsetX * ratio, -MAX_EYE_X, MAX_EYE_X)
+  eyeOffsetY.value = clamp(offsetY * ratio, -MAX_EYE_Y, MAX_EYE_Y)
+}
+
+function clamp(value, min, max) {
+  return Math.min(Math.max(value, min), max)
+}
+
+onMounted(() => {
+  window.addEventListener('mousemove', handleMouseMove)
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener('mousemove', handleMouseMove)
+})
+// Attach the event listener when component mounts
+onMounted(() => {
+  window.addEventListener('mousemove', handleMouseMove)
+})
+
+// Clean up when component unmounts
+onBeforeUnmount(() => {
+  window.removeEventListener('mousemove', handleMouseMove)
+})
+
 const downloadPDF = () => {
   const link = document.createElement('a')
   link.href = '/cv.pdf'
   link.download = 'cv.pdf'
   link.click()
-}
-
-const faceRef = ref(null)
-const mouseX = ref(0)
-const mouseY = ref(0)
-
-const handleMouseMove = e => {
-  const rect = faceRef.value.getBoundingClientRect()
-  const x = e.clientX - rect.left
-  const y = e.clientY - rect.top
-  mouseX.value = x
-  mouseY.value = y
-}
-
-// Base position for irises (adjust to match eyes)
-const eyeOffsetLeft = { x: 0.25, y: 0.3 }
-const eyeOffsetRight = { x: 0.75, y: 0.3 }
-
-const irisMovementRange = 10 // pixels
-
-const leftIrisStyle = computed(() => {
-  return moveIris(eyeOffsetLeft)
-})
-
-const rightIrisStyle = computed(() => {
-  return moveIris(eyeOffsetRight)
-})
-
-function moveIris(base) {
-  const dx = mouseX.value / faceRef.value.clientWidth - base.x
-  const dy = mouseY.value / faceRef.value.clientHeight - base.y
-  const x = base.x * 100 + dx * irisMovementRange
-  const y = base.y * 100 + dy * irisMovementRange
-
-  return {
-    transform: `translate(-50%, -50%)`,
-    left: `${x}%`,
-    top: `${y}%`,
-  }
 }
 </script>
 
