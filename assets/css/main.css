@@ -13,4 +13,12 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  transition: background-color 1s ease;
+}
+body.text-white {
+  color: white;
+}
+
+body.text-black {
+  color: black;
 }

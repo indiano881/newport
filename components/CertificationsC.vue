@@ -7,7 +7,7 @@
       <div
         v-for="(cert, index) in certifications"
         :key="index"
-        class="rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 p-6 text-center relative group bg-blue-200"
+        class="rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 p-6 text-center relative group bg-[#DFC7EB]"
       >
         <img
           :src="`/certifications/${cert.image}`"
