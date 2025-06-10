@@ -29,6 +29,20 @@
         class="absolute w-1 h-1 md:w-2 md:h-2 top-[40%] right-[42%]"
         :style="{ transform: `translate(${eyeOffsetX}px, ${eyeOffsetY}px)` }"
       />
+      <!-- Eyebrow 2 (left  Eyebrow) -->
+      <NuxtImg
+        src="/hero/eyebrow.svg"
+        alt="Right Iris"
+        class="absolute w-1 h-1 md:w-5 md:h-5 top-[32%] left-[40%]"
+        :style="{ transform: `translate(${eyeOffsetX}px, ${eyeOffsetY}px)` }"
+      />
+      <!-- Eyebrow 2 (right Eyebrow) -->
+      <NuxtImg
+        src="/hero/eyebrow.svg"
+        alt="Right Iris"
+        class="absolute w-1 h-1 md:w-5 md:h-5 top-[32%] right-[40%]"
+        :style="{ transform: `translate(${eyeOffsetX}px, ${eyeOffsetY}px)` }"
+      />
     </div>
 
     <!-- Introduction Text -->
