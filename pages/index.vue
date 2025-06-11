@@ -1,5 +1,5 @@
 <template>
-  <section class="slide" data-background="#eacbd1">
+  <section class="slide" data-background="#5a7ab3 ">
     <main
       class="flex flex-col items-center justify-center min-h-screen h-full px-6 space-y-8 text-center text-gray-800 dark:text-white"
     >
@@ -84,7 +84,7 @@
         </button>
 
         <a
-          href="/cv.pdf"
+          href="/resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
           class="custom-button link-button"
@@ -96,10 +96,10 @@
     </main>
   </section>
   <!-- Scroll Sections -->
-  <section class="slide" data-background="#FCD9AE">
+  <section class="slide" data-background="#769ccf">
     <ProjectsDisplay />
   </section>
-  <section class="slide" data-background="#D4EAC8" data-text="white">
+  <section class="slide" data-background="#94bde3" data-text="white">
     <MyStory />
   </section>
 </template>
@@ -171,8 +171,8 @@ onBeforeUnmount(() => {
 
 const downloadPDF = () => {
   const link = document.createElement('a')
-  link.href = '/cv.pdf'
-  link.download = 'cv.pdf'
+  link.href = '/resume.pdf'
+  link.download = 'resume.pdf'
   link.click()
 }
 

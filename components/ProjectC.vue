@@ -11,7 +11,7 @@
 
     <!-- Fading Overlay -->
     <div
-      class="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition-colors duration-500"
+      class="absolute inset-0 bg-black/25 group-hover:bg-black/10 transition-colors duration-500"
     ></div>
 
     <!-- Bottom Panel with Text -->

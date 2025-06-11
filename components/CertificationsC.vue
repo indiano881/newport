@@ -1,13 +1,13 @@
 <template>
   <div class="max-w-6xl mx-auto px-4 py-10">
-    <h1 class="text-3xl font-bold mb-8 text-center text-black">
+    <h1 class="text-5xl font-bold mb-8 text-center text-black">
       My Certifications
     </h1>
     <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       <div
         v-for="(cert, index) in certifications"
         :key="index"
-        class="rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 p-6 text-center relative group bg-[#DFC7EB]"
+        class="rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 p-6 text-center relative group bg-white"
       >
         <img
           :src="`/certifications/${cert.image}`"

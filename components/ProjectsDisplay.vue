@@ -3,7 +3,7 @@
     <!-- Section Title -->
     <div class="text-center mb-12">
       <h2 class="text-5xl font-bold text-gray-900 mb-2">Projects</h2>
-      <p class="text-gray-500 text-lg">A showcase of my latest work</p>
+      <p class="text-gray-900 text-xl">A showcase of my latest work</p>
     </div>
 
     <!-- Responsive Card Grid -->

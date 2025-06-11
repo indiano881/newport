@@ -4,7 +4,7 @@ import CertificationsC from './CertificationsC.vue'
 
 <template>
   <section class="max-w-4xl mx-auto px-6 py-4 text-gray-800 dark:text-white">
-    <h1 class="text-4xl font-bold mb-8 text-center text-black">About Me</h1>
+    <h1 class="text-5xl font-bold mb-8 text-center text-black">About Me</h1>
     <div class="flex justify-center my-4">
       <NuxtImg
         src="/davide1.png"

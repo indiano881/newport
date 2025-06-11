@@ -145,7 +145,7 @@ img {
   padding: 50px;
   width: calc(100%);
   height: calc(100vh);
-  background-color: #94a3b8;
+  background-color: #5a7ab3;
   color: white;
 }
 .nav.sp-menu .nav__list {
