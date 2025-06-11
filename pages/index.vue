@@ -1,5 +1,5 @@
 <template>
-  <section class="slide" data-background="#5a7ab3 ">
+  <section class="slide" data-background="#eacbd1 ">
     <main
       class="flex flex-col items-center justify-center min-h-screen h-full px-6 space-y-8 text-center text-gray-800 dark:text-white"
     >
@@ -96,7 +96,7 @@
     </main>
   </section>
   <!-- Scroll Sections -->
-  <section class="slide" data-background="#769ccf">
+  <section class="slide" data-background="#FCD9AE">
     <ProjectsDisplay />
   </section>
   <section class="slide" data-background="#94bde3" data-text="white">

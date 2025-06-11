@@ -44,7 +44,7 @@ const handleSubmit = async e => {
 
 <template>
   <div
-    class="min-h-screen flex flex-col items-center justify-center px-4 py-12"
+    class="min-h-screen flex flex-col items-center justify-center px-4 py-12 bg-[#eacbd1]"
   >
     <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-2">
       Contact me
