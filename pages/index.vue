@@ -159,7 +159,12 @@ const handleScroll = () => {
 }
 
 onMounted(() => {
-  window.addEventListener('mousemove', handleMouseMove)
+  const isMobile = window.innerWidth < 768
+
+  if (!isMobile) {
+    window.addEventListener('mousemove', handleMouseMove)
+  }
+
   window.addEventListener('scroll', handleScroll)
   handleScroll() // Initial check
 })
