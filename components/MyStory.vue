@@ -14,18 +14,21 @@ import CertificationsC from './CertificationsC.vue'
       />
     </div>
     <p class="mb-6 text-lg leading-relaxed text-black">
-      Hi, I’m <strong>Davide Baldi</strong> — a passionate and driven
-      <strong>Fullstack Developer</strong> based in Stockholm, Sweden. My
-      expertise lies in building modern, responsive, and user-focused web
-      applications with clean code and thoughtful design.
+      Hi, I'm <strong>Davide Baldi</strong> — a
+      <strong>fullstack developer and cloud engineer</strong> based in
+      Stockholm, Sweden. I work across the entire stack: from building
+      responsive web platforms with modern JavaScript frameworks, to designing
+      cloud infrastructure, data pipelines, and DevOps automation on GCP and
+      AWS.
     </p>
 
     <p class="mb-6 text-lg leading-relaxed text-black">
-      After several years in the restaurant industry, I made the bold decision
-      to change my career path in 2022. While I enjoyed working with people, I
-      wanted a future that allowed me to build things, solve complex problems,
-      and work on innovative products. That’s when I dove head-first into tech —
-      and I’ve never looked back.
+      Before moving into tech, I spent several years in the restaurant industry
+      — a high-pressure environment that taught me how to stay calm under
+      deadlines, lead teams, and solve problems on the fly. In 2022 I made a
+      deliberate career switch into software engineering, and that background
+      gives me an edge: I ramp up fast, communicate clearly with non-technical
+      stakeholders, and bring a service-oriented mindset to every team I join.
     </p>
     <div class="flex justify-center my-4 text-black">
       <NuxtImg
@@ -36,49 +39,47 @@ import CertificationsC from './CertificationsC.vue'
       />
     </div>
 
-    <p class="mb-6 text-lg leading-relaxed text-black">
-      I’m currently finishing my education as a frontend app developer at
-      <strong>Changemaker Educations</strong>, where I’ve had the opportunity to
-      learn deeply about frontend frameworks, backend services, DevOps, and
-      cloud integrations. I've also worked as a Scrum Master and Product Owner
-      during our agile projects.
-    </p>
-
     <h2 class="text-2xl font-semibold mt-12 mb-4 text-black">What I Do</h2>
 
     <ul class="list-disc list-inside space-y-2 mb-6 text-lg text-black">
       <li>
-        <strong>Frontend Development:</strong> HTML, CSS, JavaScript,
-        TypeScript, Vue, Nuxt, React, Next.js
+        <strong>Frontend & Fullstack:</strong> JavaScript, TypeScript, Vue,
+        Nuxt, React, Next.js, Node.js, Express
       </li>
       <li>
-        <strong>Backend & APIs:</strong> Node.js, Express, REST, Supabase,
-        MongoDB, MySQL, DynamoDB
+        <strong>Cloud Platforms:</strong> GCP (BigQuery, Dataflow, Pub/Sub,
+        Cloud Functions, Cloud Run), AWS (S3, Lambda, RDS, IAM, API Gateway)
       </li>
       <li>
-        <strong>DevOps & Cloud:</strong> Git, Docker, Kubernetes, AWS (S3,
-        Lambda, RDS, IAM, API Gateway)
+        <strong>Data & Analytics:</strong> SQL, BigQuery, Dataflow, ETL
+        pipelines, data modeling
       </li>
       <li>
-        <strong>Tooling:</strong> Tailwind CSS, Material UI, Framer Motion,
-        Jest, GitHub Actions
+        <strong>DevOps & Automation:</strong> Docker, Kubernetes, Terraform,
+        GitHub Actions, CI/CD pipelines
+      </li>
+      <li>
+        <strong>Databases:</strong> PostgreSQL, MySQL, MongoDB, DynamoDB,
+        Supabase
       </li>
     </ul>
     <CertificationsC />
 
-    <h2 class="text-2xl font-semibold mt-12 mb-4 text-black">My Approach</h2>
+    <h2 class="text-2xl font-semibold mt-12 mb-4 text-black">How I Work</h2>
 
     <p class="mb-6 text-lg leading-relaxed text-black">
-      I love building tools and platforms that people actually enjoy using.
-      Whether I’m working on a solo project or collaborating in a team, I
-      believe in shipping fast, learning constantly, and improving iteratively.
-      I bring strong communication skills, a growth mindset, and a lot of energy
-      to the table.
+      I approach every project with an architecture-first mindset — defining
+      clear boundaries between services, choosing the right data layer for the
+      workload, and building with observability from day one. I value clean
+      abstractions, automated testing, and shipping iteratively. When I join a
+      team, I look for opportunities to mentor junior developers, improve
+      documentation, and reduce friction in the development workflow.
     </p>
 
     <p class="mb-6 text-lg leading-relaxed text-black">
-      I’m currently open to new challenges and internship opportunities where I
-      can continue growing as a developer and contribute to meaningful products.
+      I'm looking for senior engineering roles where I can own systems
+      end-to-end, contribute to architectural decisions, and help grow the
+      engineers around me.
     </p>
   </section>
 </template>

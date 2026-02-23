@@ -2,12 +2,11 @@ export const projects = [
   {
     title: 'Nuxtermind',
     slug: 'nuxtermind',
-    subtitle:
-      'My own modern intepretation of a classic Code-Breaking Puzzle Game',
+    subtitle: 'Real-time multiplayer game with WebSocket architecture',
     description:
-      'A modern twist on the classic Mastermind game with characters and real-time multiplayer.',
+      'A real-time multiplayer code-breaking game built on event-driven WebSocket architecture.',
     content:
-      'Nuxtermind is a very modern version of the Mastermind/secret code game with a touch of some modern features. Players can choose unique characters with special abilities and engage in timed, real-time multiplayer battles. One of the biggest strengths was integrating Supabase and Socket.io to handle matchmaking and real-time communication between players. The challenge came in synchronizing game state updates across different users while keeping the experience smooth and bug-free. Designing the game logic to be scalable and reusable for future game modes also required careful planning.',
+      'Nuxtermind is a modern take on the classic Mastermind game, rebuilt as a real-time multiplayer experience. The core technical challenge was designing an event-driven architecture using Socket.io to handle matchmaking, game state synchronization, and conflict resolution across concurrent sessions. Supabase provides the persistence layer for user data and match history. The game logic was designed to be stateless on the client and authoritative on the server, preventing desync issues and enabling future game modes without architectural changes. Character selection and timed rounds add gameplay depth while stress-testing the real-time pipeline under load.',
     tech: 'Vue 3, Nuxt, Supabase, Socket.io, Pug, Tailwind',
     image: 'nuxtermind1.png',
     order: 1,
@@ -17,12 +16,12 @@ export const projects = [
   {
     title: 'Parking Time',
     slug: 'parking-time',
-    subtitle: "Company's Homepage",
+    subtitle: 'Production company website with CMS integration and i18n',
     description:
-      'A multilingual company website built with Next.js and Sanity.',
+      'A multilingual production website with headless CMS, SEO optimization, and internationalization.',
     content:
-      'A real-world project developed in collaboration with Agile and UI/UX design students. Parking Time was built with the help of three other frontend developers, and we had weekly presentations with the client. The main strengths include its internationalization setup using next-intl, interactive components, smooth animations, and dynamic content fetching via Sanity and GROQ. One of the trickiest parts was implementing localization properly across all pages and ensuring SEO compatibility in different languages. We also faced performance challenges due to large media files and had to optimize image loading and build caching.',
-    tech: 'TypeScript, Next.js, React, Tailwind, Google Recaptcha V3, Sanity, Groq, Internationalization',
+      "Parking Time is a production company website delivered through a full agile process with weekly client presentations. The architecture uses Next.js with next-intl for internationalization across all routes, and Sanity as a headless CMS so the client can manage content independently. GROQ queries power dynamic content fetching with minimal payloads. Key engineering decisions included structuring the i18n routing to preserve SEO across languages, implementing Google reCAPTCHA v3 for form protection, and optimizing build caching and image loading to handle the client's media-heavy content. Shipped on schedule with a team of four developers collaborating alongside UX designers.",
+    tech: 'TypeScript, Next.js, React, Tailwind, Google Recaptcha V3, Sanity, GROQ, Internationalization',
     image: 'parking.png',
     order: 2,
     siteLink: 'https://parking-time.vercel.app/en',
@@ -31,11 +30,12 @@ export const projects = [
   {
     title: 'Pandorum',
     slug: 'pandorum',
-    subtitle: 'E-commerce',
-    description: 'A basic e-commerce store with wishlist functionality.',
+    subtitle: 'E-commerce platform with client-side state management',
+    description:
+      'An e-commerce storefront with wishlist functionality powered by React Context API.',
     content:
-      'This is a simple Next.js project where users can explore a curated collection of luxury and futuristic products. You can log in using a test username (Davide) and try the wishlist functionality, powered by React’s useContext API. A key highlight was building the wishlist state management from scratch, ensuring it was persistent across components. The challenge was designing an engaging UX despite limited content and simulating a realistic product browsing flow. Additionally, setting up a smooth splash screen animation added a nice polish but took trial-and-error to implement correctly across all screen sizes.',
-    tech: 'Next.js, Tailwind CSS, useContenxt, Splashscreen animation',
+      "Pandorum is an e-commerce platform where users browse a curated product catalog with wishlist functionality. The state management layer was built from scratch using React's Context API — a deliberate architectural choice to keep the bundle lean and avoid external dependencies for a contained state graph. Context providers handle authentication, cart, and wishlist state with clean separation of concerns. The UI features a splash screen animation calibrated across breakpoints and a product browsing flow designed around engagement metrics. The project demonstrates that lightweight state solutions can be the right tool when the complexity profile fits.",
+    tech: 'Next.js, Tailwind CSS, React Context API, Splash Screen Animation',
     image: 'pandorum.png',
     order: 3,
     siteLink: 'https://store-context.vercel.app/',
@@ -44,11 +44,11 @@ export const projects = [
   {
     title: 'Economic MUI',
     slug: 'economic-mui',
-    subtitle: 'Dashboard',
+    subtitle: 'Data visualization dashboard with real-time API integration',
     description:
-      'An interactive dashboard to explore economic data using charts.',
+      'An interactive dashboard for economic data analysis with dynamic charting and real-time API feeds.',
     content:
-      'A SPA dashboard built with Material-UI (MUI) that allows users to visualize and analyze economic data through interactive charts and graphs. It includes filtering options, real-time updates, and customizable layouts. The strength of the project was its clean, modular code structure and responsive design powered by MUI’s Grid system. Implementing dynamic charting and integrating real-time data from multiple APIs presented the biggest challenge, especially in handling different formats and keeping performance smooth. Managing re-renders with React hooks also required careful optimization to avoid lag on chart updates.',
+      "Economic MUI is a single-page dashboard that visualizes economic data through interactive charts and configurable layouts. The architecture separates data fetching, transformation, and rendering into distinct layers — API responses are normalized into a common schema before hitting the charting components, making it straightforward to add new data sources. Material-UI's Grid system handles the responsive layout. The main performance challenge was managing React re-renders during real-time data updates; this was solved with memoization strategies and selective state subscriptions to keep chart interactions smooth even with frequent data refreshes.",
     tech: 'TypeScript, React, Material-UI, Single Page Application',
     image: 'economic.png',
     order: 4,

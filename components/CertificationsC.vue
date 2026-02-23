@@ -1,7 +1,7 @@
 <template>
   <div class="max-w-6xl mx-auto px-4 py-10">
     <h1 class="text-5xl font-bold mb-8 text-center text-black">
-      My Certifications
+      Certifications
     </h1>
     <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       <div
@@ -13,14 +13,28 @@
           :src="`/certifications/${cert.image}`"
           :alt="cert.title"
           class="w-24 h-24 mx-auto mb-4 object-contain"
+          :class="{ 'opacity-60': cert.inProgress }"
         />
         <h2 class="text-xl font-semibold text-black">{{ cert.title }}</h2>
+        <p
+          v-if="cert.description"
+          class="text-sm text-gray-600 mt-2 leading-relaxed"
+        >
+          {{ cert.description }}
+        </p>
+        <span
+          v-if="cert.inProgress"
+          class="inline-block mt-3 px-3 py-1 text-xs font-semibold rounded-full bg-yellow-300 text-yellow-900"
+        >
+          In Progress
+        </span>
 
-        <!-- Hover effect -->
+        <!-- Hover effect (earned certs only) -->
         <div
+          v-if="!cert.inProgress"
           class="absolute inset-0 bg-black bg-opacity-40 text-white flex items-center justify-center rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
         >
-          <div class="flex flex-col items center space-y-2">
+          <div class="flex flex-col items-center space-y-2">
             <span class="text-sm font-semibold">{{ cert.number }}</span>
             <span class="text-xl font-semibold"
               >Valid till: {{ cert.expiration }}</span

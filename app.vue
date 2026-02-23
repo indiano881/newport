@@ -8,13 +8,13 @@
 </template>
 <script setup lang="ts">
 useSeoMeta({
-  title: 'Davide – Fullstack Developer',
-  ogTitle: 'Davide – Fullstack Developer',
+  title: 'Davide Baldi — Cloud-Native Fullstack & Analytics Engineer',
+  ogTitle: 'Davide Baldi — Cloud-Native Fullstack & Analytics Engineer',
   description:
-    'Hi, I’m Davide. I build modern web and mobile apps using React, Vue, and Node.js. Passionate about clean code, design systems, and cloud technologies.',
+    'GCP-certified fullstack and cloud engineer building web platforms, cloud infrastructure, and data pipelines. Based in Stockholm.',
   ogDescription:
-    'Discover Davide’s portfolio – showcasing modern web development projects using React, Vue, Node.js, and more.',
-  ogImage: 'https://yourdomain.com/og-image.png', // Replace with your actual OG image URL
+    'GCP-certified fullstack and cloud engineer building web platforms, cloud infrastructure, and data pipelines. Based in Stockholm.',
+  ogImage: 'https://yourdomain.com/og-image.png',
   twitterCard: 'summary_large_image',
 })
 </script>

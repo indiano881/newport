@@ -51,18 +51,18 @@
       <!-- Introduction Text -->
       <div class="flex flex-col space-y-4 max-w-2xl">
         <p class="text-2xl font-semibold text-black">
-          Hello! It’s a me, Davide 👋
+          Davide Baldi — Cloud-Native Fullstack & Analytics Engineer
         </p>
-        <p class="text-lg text-black">Fullstack developer based in Stockholm</p>
         <p
           class="bg-[#05A7F2] text-white px-4 py-2 rounded-md text-2xl border-black border-2"
         >
-          I love to find solutions to complex IT problems!
+          I architect scalable platforms, automate data workflows, and build
+          fullstack products that drive real impact.
         </p>
         <p class="text-lg text-black font-semibold">My expertise</p>
         <p class="text-base leading-relaxed text-black">
-          Frontend engineering and web optimization, cloud development and data
-          analytics.
+          GCP-certified data engineer with hands-on experience across fullstack
+          development, cloud architecture, DevOps automation, and analytics.
         </p>
       </div>
 
@@ -99,6 +99,80 @@
   <section class="slide" data-background="#FCD9AE">
     <ProjectsDisplay />
   </section>
+
+  <!-- Core Pillars -->
+  <section class="slide" data-background="#C4DDB2">
+    <div class="max-w-6xl mx-auto px-6 py-20">
+      <h2 class="text-4xl font-bold text-center text-black mb-14">
+        Core Pillars
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <!-- Web Platforms -->
+        <div class="text-center">
+          <div class="text-5xl mb-4">
+            <Icon name="mdi:web" size="48" class="text-black" />
+          </div>
+          <h3 class="text-xl font-semibold text-black mb-3">Web Platforms</h3>
+          <p class="text-base leading-relaxed text-black">
+            Modern fullstack applications with Vue, React, Nuxt, and Next.js.
+            Server-side rendering, static generation, and API design — built for
+            performance and maintainability.
+          </p>
+        </div>
+        <!-- Cloud & Infrastructure -->
+        <div class="text-center">
+          <div class="text-5xl mb-4">
+            <Icon name="mdi:cloud-outline" size="48" class="text-black" />
+          </div>
+          <h3 class="text-xl font-semibold text-black mb-3">
+            Cloud & Infrastructure
+          </h3>
+          <p class="text-base leading-relaxed text-black">
+            GCP and AWS architecture — compute, storage, networking, and
+            serverless. Infrastructure as Code with Terraform, container
+            orchestration with Kubernetes and Docker.
+          </p>
+        </div>
+        <!-- Analytics & Automation -->
+        <div class="text-center">
+          <div class="text-5xl mb-4">
+            <Icon name="mdi:chart-bar-stacked" size="48" class="text-black" />
+          </div>
+          <h3 class="text-xl font-semibold text-black mb-3">
+            Analytics & Automation
+          </h3>
+          <p class="text-base leading-relaxed text-black">
+            Data pipelines with BigQuery, Dataflow, and Pub/Sub. CI/CD
+            automation with GitHub Actions. ETL workflows, monitoring, and
+            observability built into every system.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="slide" data-background="#C9B8DB">
+    <div class="max-w-6xl mx-auto px-6 py-20">
+      <h2 class="text-4xl font-bold text-center text-black mb-14">
+        What People Say
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div
+          v-for="(t, index) in testimonials"
+          :key="index"
+          class="bg-white rounded-xl shadow-md p-6 text-center"
+        >
+          <p class="text-base leading-relaxed text-gray-700 italic mb-4">
+            "{{ t.short }}"
+          </p>
+          <p class="text-sm font-semibold text-black">{{ t.name }}</p>
+          <p class="text-sm text-gray-500">{{ t.role }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="slide" data-background="#94bde3" data-text="white">
     <MyStory />
   </section>
@@ -106,6 +180,7 @@
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { testimonials } from '@/utils/testimonials.js'
 
 const eyeOffsetX = ref(0)
 const eyeOffsetY = ref(0)
