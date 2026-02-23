@@ -50,19 +50,15 @@
 
       <!-- Introduction Text -->
       <div class="flex flex-col space-y-4 max-w-2xl">
-        <p class="text-2xl font-semibold text-black">
-          Davide Baldi — Cloud-Native Fullstack & Analytics Engineer
+        <p class="text-3xl font-bold text-black">Davide Baldi</p>
+        <p class="text-xl text-black">
+          Cloud-Native Fullstack & Analytics Engineer
         </p>
         <p
           class="bg-[#05A7F2] text-white px-4 py-2 rounded-md text-2xl border-black border-2"
         >
           I architect scalable platforms, automate data workflows, and build
           fullstack products that drive real impact.
-        </p>
-        <p class="text-lg text-black font-semibold">My expertise</p>
-        <p class="text-base leading-relaxed text-black">
-          GCP-certified data engineer with hands-on experience across fullstack
-          development, cloud architecture, DevOps automation, and analytics.
         </p>
       </div>
 
@@ -103,9 +99,13 @@
   <!-- Core Pillars -->
   <section class="slide" data-background="#C4DDB2">
     <div class="max-w-6xl mx-auto px-6 py-20">
-      <h2 class="text-4xl font-bold text-center text-black mb-14">
+      <h2 class="text-4xl font-bold text-center text-black mb-4">
         Core Pillars
       </h2>
+      <p class="text-center text-base leading-relaxed text-black mb-14">
+        GCP-certified data engineer with hands-on experience across fullstack
+        development, cloud architecture, DevOps automation, and analytics.
+      </p>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
         <!-- Web Platforms -->
         <div class="text-center">
