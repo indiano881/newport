@@ -55,7 +55,7 @@
           Cloud-Native Fullstack & Analytics Engineer
         </p>
         <p
-          class="bg-[#05A7F2] text-white px-4 py-2 rounded-md text-2xl border-black border-2"
+          class="bg-white text-black px-4 py-2 rounded-md text-2xl border-black border-2"
         >
           I architect scalable platforms, automate data workflows, and build
           fullstack products that drive real impact.
@@ -285,7 +285,7 @@ onBeforeRouteLeave(() => {
   min-width: 190px;
   border: 2px solid black;
   border-radius: 9999px;
-  background-color: #aee4fd;
+  background-color: white;
   color: black;
   text-align: center;
   cursor: pointer;
@@ -296,7 +296,7 @@ onBeforeRouteLeave(() => {
 }
 
 .custom-button:hover {
-  background-color: #73c7ef;
+  background-color: #f0f0f0;
 }
 
 @media (prefers-color-scheme: dark) {
