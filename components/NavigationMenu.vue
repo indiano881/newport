@@ -49,6 +49,9 @@ onBeforeUnmount(() => {
             <NuxtLink href="/projects" @click="closeMenu">Projects</NuxtLink>
           </li>
           <li class="n1 p-2 md:pr-4">
+            <NuxtLink href="/services" @click="closeMenu">Services</NuxtLink>
+          </li>
+          <li class="n1 p-2 md:pr-4">
             <NuxtLink href="/about" @click="closeMenu">About me</NuxtLink>
           </li>
           <li class="n1 p-2 md:pr-4">
