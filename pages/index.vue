@@ -80,7 +80,7 @@
         </button>
 
         <a
-          href="/resume.pdf"
+          href="/cv2.pdf"
           target="_blank"
           rel="noopener noreferrer"
           class="custom-button link-button"
@@ -251,7 +251,7 @@ onBeforeUnmount(() => {
 
 const downloadPDF = () => {
   const link = document.createElement('a')
-  link.href = '/resume.pdf'
+  link.href = '/cv2.pdf'
   link.download = 'resume.pdf'
   link.click()
 }
