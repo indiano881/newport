@@ -1,6 +1,26 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import { services } from '~/utils/services'
+
+const currentIndex = ref(0)
+const visibleCount = 3
+
+const visibleServices = computed(() => {
+  const result = []
+  for (let i = 0; i < visibleCount; i++) {
+    result.push(services[(currentIndex.value + i) % services.length])
+  }
+  return result
+})
+
+const next = () => {
+  currentIndex.value = (currentIndex.value + 1) % services.length
+}
+
+const prev = () => {
+  currentIndex.value =
+    (currentIndex.value - 1 + services.length) % services.length
+}
 
 const name = ref('')
 const email = ref('')
@@ -49,22 +69,39 @@ const handleSubmit = async (e) => {
       Services
     </h1>
 
-    <div
-      class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-5xl mb-16"
-    >
-      <div
-        v-for="service in services"
-        :key="service.title"
-        class="bg-white border-2 border-black rounded-2xl p-8 flex flex-col items-center text-center"
+    <div class="w-full max-w-5xl mb-16 flex items-center gap-4">
+      <button
+        @click="prev"
+        class="shrink-0 w-10 h-10 flex items-center justify-center rounded-full border-2 border-black bg-white hover:bg-gray-100 transition"
       >
-        <Icon :name="service.icon" size="48" class="mb-4 text-gray-800" />
-        <h2 class="text-2xl font-bold text-gray-800 mb-3">
-          {{ service.title }}
-        </h2>
-        <p class="text-gray-600 leading-relaxed">
-          {{ service.description }}
-        </p>
+        <Icon name="mdi:chevron-left" size="24" />
+      </button>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
+        <div
+          v-for="service in visibleServices"
+          :key="service.title"
+          class="bg-white border-2 border-black rounded-2xl p-8 flex flex-col items-center text-center"
+        >
+          <Icon :name="service.icon" size="48" class="mb-4 text-gray-800" />
+          <h2 class="text-2xl font-bold text-gray-800 mb-3">
+            {{ service.title }}
+          </h2>
+          <p class="text-gray-600 leading-relaxed">
+            {{ service.description }}
+          </p>
+          <p v-if="service.pricing" class="text-gray-800 font-semibold mt-4">
+            {{ service.pricing }}
+          </p>
+        </div>
       </div>
+
+      <button
+        @click="next"
+        class="shrink-0 w-10 h-10 flex items-center justify-center rounded-full border-2 border-black bg-white hover:bg-gray-100 transition"
+      >
+        <Icon name="mdi:chevron-right" size="24" />
+      </button>
     </div>
 
     <div class="w-full max-w-5xl mb-16 flex flex-col items-center">
