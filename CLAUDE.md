@@ -26,9 +26,10 @@ No linter or test runner is configured.
 - `/projects` — Projects showcase grid
 - `/projects/[slug]` — Dynamic project detail (slugs from `utils/data.js`)
 - `/about` — Bio and certifications
+- `/services` — Consulting, teaching, and mentoring offerings
 - `/contact` — Contact form (Formspree)
 
-**Data layer:** Content is driven by plain JS arrays in `utils/` — `data.js` (projects), `certification.js` (certs), `testimonials.js` (testimonials). Update these files to add/edit content.
+**Data layer:** Content is driven by plain JS arrays in `utils/` — `data.js` (projects), `certification.js` (certs), `testimonials.js` (testimonials), `services.js` (service offerings). Update these files to add/edit content.
 
 **Components:** `components/` contains shared UI (NavigationMenu, ProjectsDisplay, ProjectC, MyStory, CertificationsC). Nuxt auto-imports them.
 

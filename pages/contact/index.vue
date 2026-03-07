@@ -46,9 +46,26 @@ const handleSubmit = async e => {
   <div
     class="min-h-screen flex flex-col items-center justify-center px-4 py-12 bg-[#eacbd1]"
   >
-    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-2">
+    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
       Contact me
     </h1>
+
+    <div class="w-full max-w-lg mb-10 flex flex-col items-center">
+      <p class="text-gray-600 mb-4 text-center">
+        Want to talk? Book a free 15-minute intro call.
+      </p>
+      <a
+        href="https://calendly.com/d-baldi88/30min"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 bg-gray-800 hover:bg-gray-900 text-white font-semibold py-3 px-8 rounded-lg transition duration-200 border-2 border-black text-lg"
+      >
+        <Icon name="mdi:calendar-clock" size="24" />
+        Book a Call
+      </a>
+    </div>
+
+    <p class="text-gray-600 mb-4">Or send me a message</p>
 
     <div
       class="bg-[#AEE4FD] border-2 border-black w-full max-w-lg shadow-xl rounded-2xl p-8"
