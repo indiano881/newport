@@ -92,12 +92,12 @@
     </main>
   </section>
   <!-- Scroll Sections -->
-  <section class="slide" data-background="#FCD9AE">
+  <section class="slide" data-background="#eacbd1">
     <ProjectsDisplay />
   </section>
 
   <!-- Core Pillars -->
-  <section class="slide" data-background="#C4DDB2">
+  <section class="slide" data-background="#FCD9AE">
     <div class="max-w-6xl mx-auto px-6 py-20">
       <h2 class="text-4xl font-bold text-center text-black mb-4">
         Core Pillars
@@ -152,7 +152,7 @@
   </section>
 
   <!-- Testimonials -->
-  <section class="slide" data-background="#C9B8DB">
+  <section class="slide" data-background="#FCD9AE">
     <div class="max-w-6xl mx-auto px-6 py-20">
       <h2 class="text-4xl font-bold text-center text-black mb-14">
         What People Say
@@ -173,7 +173,51 @@
     </div>
   </section>
 
-  <section class="slide" data-background="#94bde3" data-text="white">
+  <!-- Services -->
+  <section class="slide" data-background="#94bde3">
+    <div class="max-w-6xl mx-auto px-6 py-20">
+      <h2 class="text-4xl font-bold text-center text-black mb-14">
+        Services
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
+        <div
+          v-for="service in visibleServices"
+          :key="service.title"
+          class="bg-white border-2 border-black rounded-2xl p-8 flex flex-col items-center text-center"
+        >
+          <Icon :name="service.icon" size="48" class="mb-4 text-black" />
+          <h3 class="text-xl font-semibold text-black mb-3">
+            {{ service.title }}
+          </h3>
+          <p class="text-base leading-relaxed text-gray-700">
+            {{ service.description }}
+          </p>
+          <p v-if="service.pricing" class="text-black font-semibold mt-4">
+            {{ service.pricing }}
+          </p>
+        </div>
+      </div>
+      <div class="flex flex-col items-center gap-4">
+        <a
+          href="https://calendly.com/d-baldi88/30min"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 bg-gray-800 hover:bg-gray-900 text-white font-semibold py-3 px-8 rounded-lg transition duration-200 border-2 border-black text-lg"
+        >
+          <Icon name="mdi:calendar-clock" size="24" />
+          Book a Call
+        </a>
+        <NuxtLink
+          to="/services"
+          class="text-black underline hover:no-underline"
+        >
+          View all services
+        </NuxtLink>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" data-background="#94bde3">
     <MyStory />
   </section>
 </template>
@@ -181,6 +225,9 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { testimonials } from '@/utils/testimonials.js'
+import { services } from '@/utils/services.js'
+
+const visibleServices = services.slice(0, 3)
 
 const eyeOffsetX = ref(0)
 const eyeOffsetY = ref(0)

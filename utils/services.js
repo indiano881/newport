@@ -18,7 +18,7 @@ export const services = [
     description:
       'ATS-friendly CV rewriting, LinkedIn profile optimization, and job application strategy. Get noticed by recruiters and land more interviews. I also teach you how to crack ATS systems.',
     pricing:
-      'Individual sessions: 500 SEK/hour. Presentation + 1-hour workshop: 2,000 SEK.',
+      'Individual sessions: 500 SEK/hour. Presentation + workshop (2 hours): 2,000 SEK.',
     icon: 'mdi:file-account-outline',
   },
   {
