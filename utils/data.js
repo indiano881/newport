@@ -84,4 +84,21 @@ export const projects = [
     featured: true,
     hackathon: null,
   },
+  {
+    title: 'ICA Edge Checkout',
+    slug: 'ica-edge-checkout',
+    subtitle: '2nd Place — Couchbase Offline Resilience Hackathon',
+    description:
+      'An edge-first, offline-first self-checkout system built for grocery retail with automatic sync and real-time monitoring.',
+    content:
+      'Built for the Couchbase Edge Resilience Hackathon, ICA Edge Checkout is a three-app system simulating a grocery store that keeps running even when the network goes down. The architecture splits into a FastAPI backend with async SQLite (WAL mode) as the local source of truth, a React self-checkout terminal with offline transaction caching in localStorage, and a real-time operations dashboard. The core engineering challenge was designing the offline-first sync pipeline: terminals detect connectivity loss via heartbeat monitoring, queue transactions locally with idempotency keys, and batch-sync them when connectivity returns — with the backend enforcing deduplication via unique constraints. Other technical highlights include ECDSA-signed QR codes for a mobile Scan & Pay flow (Web Crypto API on the client, DER conversion on the server), invoice payment handling with membership verification, and best-effort Couchbase Cloud sync as a resilient cloud backup layer that never blocks the checkout flow.',
+    tech: 'Python, FastAPI, SQLite, React, Vite, Couchbase, ECDSA, JWT, WebSocket',
+    image: 'ica-checkout.png',
+    order: 6,
+    siteLink: null,
+    githubLink: null,
+    tags: ['Fullstack'],
+    featured: true,
+    hackathon: { place: 2 },
+  },
 ]
