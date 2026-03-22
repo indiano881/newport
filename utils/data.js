@@ -101,4 +101,21 @@ export const projects = [
     featured: true,
     hackathon: { place: 2 },
   },
+  {
+    title: 'Innovation Airlock',
+    slug: 'innovation-airlock',
+    subtitle: '3rd Place — Transcom Hackathon',
+    description:
+      'A self-service deployment gateway that lets non-engineers drag-and-drop HTML projects and get a live URL on GCP, with AI-powered security scanning and Terraform-backed IaC.',
+    content:
+      'Built for the Transcom hackathon, Innovation Airlock solves a real problem: Sales and Solutions teams "vibe code" HTML widgets with AI tools like Gemini and Lovable, but have no way to share them beyond localhost. The system provides a drag-and-drop interface where users upload a ZIP of their static site, which then goes through three concurrent AI-powered checks (security, cost estimation, and brand alignment) using Claude Sonnet via the Anthropic API. If approved, the backend auto-generates a Dockerfile, builds a container via Google Cloud Build, pushes it to Artifact Registry, and deploys it to Cloud Run — all orchestrated through dynamically generated Terraform with per-deployment workspaces and GCS-backed state. The architecture splits into a React frontend with a state-machine-driven UI, a FastAPI backend with async SQLite, and a full Terraform IaC pipeline. Demo deployments auto-expire after 1 hour via a background cleanup loop.',
+    tech: 'React, TypeScript, Vite, Python, FastAPI, SQLite, Terraform, GCP, Cloud Run, Cloud Build, Artifact Registry, Anthropic API, Docker',
+    image: 'airlock.png',
+    order: 7,
+    siteLink: null,
+    githubLink: null,
+    tags: ['Fullstack', 'Cloud'],
+    featured: true,
+    hackathon: { place: 3 },
+  },
 ]
