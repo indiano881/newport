@@ -8,11 +8,12 @@
     <!-- Images -->
     <div v-if="project.images && project.images.length > 1" class="grid grid-cols-1 md:grid-cols-2 gap-4">
       <img
-        v-for="img in project.images"
+        v-for="(img, i) in project.images"
         :key="img"
         :src="`/projects/${img}`"
         :alt="project.title"
         class="w-full rounded-lg shadow-lg object-cover border-black border-2"
+        :class="{ 'md:col-span-2': project.images.length % 2 !== 0 && i === project.images.length - 1 }"
       />
     </div>
     <img
@@ -24,7 +25,14 @@
 
     <!-- Video -->
     <div v-if="project.video" class="aspect-video w-full">
+      <video
+        v-if="project.video.endsWith('.mp4')"
+        :src="project.video"
+        controls
+        class="w-full h-full rounded-lg shadow-lg border-black border-2"
+      ></video>
       <iframe
+        v-else
         :src="project.video"
         class="w-full h-full rounded-lg shadow-lg border-black border-2"
         allow="autoplay; encrypted-media"
