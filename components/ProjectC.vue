@@ -2,6 +2,15 @@
   <div
     class="relative w-[90%] md:w-full h-64 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group mx-4"
   >
+    <!-- Hackathon Badge -->
+    <div
+      v-if="hackathon"
+      class="absolute top-3 right-3 z-10 bg-white/90 backdrop-blur-sm text-xs font-semibold px-2 py-1 rounded-full border border-black/20 shadow-sm"
+    >
+      {{ hackathon.place === 1 ? '🥇' : hackathon.place === 2 ? '🥈' : '🥉' }}
+      {{ hackathon.place === 1 ? '1st' : hackathon.place === 2 ? '2nd' : '3rd' }} Place
+    </div>
+
     <!-- Background Image -->
     <img
       :src="image"
@@ -64,6 +73,10 @@ const props = defineProps({
   slug: {
     type: String,
     required: true,
+  },
+  hackathon: {
+    type: Object,
+    default: null,
   },
 })
 

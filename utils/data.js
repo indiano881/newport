@@ -12,6 +12,9 @@ export const projects = [
     order: 1,
     siteLink: 'https://nuxtermind.vercel.app/',
     githubLink: 'https://nuxtermind.vercel.app/',
+    tags: ['Web', 'Fullstack'],
+    featured: true,
+    hackathon: null,
   },
   {
     title: 'Parking Time',
@@ -26,6 +29,9 @@ export const projects = [
     order: 2,
     siteLink: 'https://parking-time.vercel.app/en',
     githubLink: 'https://github.com/indiano881/Parking-time',
+    tags: ['Web'],
+    featured: true,
+    hackathon: null,
   },
   {
     title: 'Pandorum',
@@ -40,6 +46,9 @@ export const projects = [
     order: 3,
     siteLink: 'https://store-context.vercel.app/',
     githubLink: 'https://github.com/indiano881/store-context/tree/main',
+    tags: ['Web'],
+    featured: false,
+    hackathon: null,
   },
   {
     title: 'Economic MUI',
@@ -54,5 +63,25 @@ export const projects = [
     order: 4,
     siteLink: 'https://economi-mui.netlify.app/',
     githubLink: 'https://github.com/indiano881/economicMUI',
+    tags: ['Data', 'Web'],
+    featured: false,
+    hackathon: null,
+  },
+  {
+    title: 'AIX Token Season 2 Dashboard',
+    slug: 'aix-token-dashboard',
+    subtitle: 'On-chain analytics dashboard for AIX token ecosystem',
+    description:
+      'A Dune Analytics dashboard tracking AIX token bridging, TVL, migration, staking pools, and transactions.',
+    content:
+      'Built a comprehensive on-chain analytics dashboard for the AIX token Season 2 launch using Dune Analytics. The dashboard tracks key metrics across the token ecosystem: bridging activity, total value locked (TVL), token migration flows, staking pool performance, and transaction volumes. All queries were written in SQL against blockchain data, leveraging Dune\'s MCP server for data access. The dashboard provides real-time visibility into token health and user activity, serving as a monitoring tool for the PlanetIX team and community.',
+    tech: 'Dune Analytics, SQL, MCP Server, Ethereum, Base, Polygon, Chainlink CCIP, Web3, Tokenomics',
+    image: 'dune1.png',
+    order: 5,
+    siteLink: 'https://dune.com/planetix_team_official/aix-token-season-2',
+    githubLink: 'https://dune.com/planetix_team_official/aix-token-season-2',
+    tags: ['Data'],
+    featured: true,
+    hackathon: null,
   },
 ]

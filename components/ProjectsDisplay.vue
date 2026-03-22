@@ -6,18 +6,33 @@
       <p class="text-gray-900 text-xl">Systems I have designed and shipped</p>
     </div>
 
+    <!-- Filter Slot -->
+    <slot name="filters" />
+
     <!-- Responsive Card Grid -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
       <ProjectC
-        v-for="project in projects"
+        v-for="project in displayProjects"
         :key="project.title"
         :title="project.title"
         :description="project.description"
         :image="`/projects/${project.image}`"
         :slug="project.slug"
+        :hackathon="project.hackathon"
       />
     </div>
   </section>
 </template>
 
-<script setup></script>
+<script setup>
+import { projects as allProjects } from '@/utils/data.js'
+
+const props = defineProps({
+  projects: {
+    type: Array,
+    default: null,
+  },
+})
+
+const displayProjects = computed(() => props.projects ?? allProjects)
+</script>

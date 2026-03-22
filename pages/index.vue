@@ -93,7 +93,16 @@
   </section>
   <!-- Scroll Sections -->
   <section class="slide" data-background="#eacbd1">
-    <ProjectsDisplay />
+    <ProjectsDisplay :projects="featuredProjects" />
+    <div class="flex justify-center pb-12">
+      <NuxtLink
+        to="/projects"
+        class="inline-flex items-center gap-2 bg-white text-black font-semibold py-3 px-8 rounded-full border-2 border-black hover:bg-gray-100 transition text-lg"
+      >
+        Check other projects
+        <Icon name="mdi:arrow-right" size="20" />
+      </NuxtLink>
+    </div>
   </section>
 
   <!-- Core Pillars -->
@@ -223,11 +232,13 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
 import { testimonials } from '@/utils/testimonials.js'
 import { services } from '@/utils/services.js'
+import { projects } from '@/utils/data.js'
 
 const visibleServices = services.slice(0, 3)
+const featuredProjects = computed(() => projects.filter(p => p.featured))
 
 const eyeOffsetX = ref(0)
 const eyeOffsetY = ref(0)
