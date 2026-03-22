@@ -47,6 +47,11 @@
       <h3 class="text-2xl font-semibold text-black">Content</h3>
       <p class="text-gray-700">{{ project.content }}</p>
 
+      <div v-if="project.role">
+        <h3 class="text-2xl font-semibold text-black">My Role</h3>
+        <p class="text-gray-700">{{ project.role }}</p>
+      </div>
+
       <h3 class="text-2xl font-semibold text-black">Tech Stack</h3>
       <p class="text-gray-800">
         <span

@@ -17,6 +17,7 @@ export const projects = [
     tags: ['Fullstack'],
     featured: true,
     hackathon: { place: 2 },
+    role: 'Lead feature developer (25 of 63 commits, ~40%). Built the admin dashboard with live stats and settings UI, payment systems (Swish, invoice via SMTP, card toggles), offline price overrides with inventory tracking, and Couchbase Cloud sync integration. Core platform was built by a teammate; I drove all feature development, admin tooling, and edge capabilities. Team of 3.',
   },
   {
     title: 'Innovation Airlock',
@@ -28,7 +29,7 @@ export const projects = [
       'Built for the Transcom hackathon, Innovation Airlock solves a real problem: Sales and Solutions teams "vibe code" HTML widgets with AI tools like Gemini and Lovable, but have no way to share them beyond localhost. The system provides a drag-and-drop interface where users upload a ZIP of their static site, which then goes through three concurrent AI-powered checks (security, cost estimation, and brand alignment) using Claude Sonnet via the Anthropic API. If approved, the backend auto-generates a Dockerfile, builds a container via Google Cloud Build, pushes it to Artifact Registry, and deploys it to Cloud Run - all orchestrated through dynamically generated Terraform with per-deployment workspaces and GCS-backed state. The architecture splits into a React frontend with a state-machine-driven UI, a FastAPI backend with async SQLite, and a full Terraform IaC pipeline. Demo deployments auto-expire after 1 hour via a background cleanup loop.',
     tech: 'React, TypeScript, Vite, Python, FastAPI, SQLite, Terraform, GCP, Cloud Run, Cloud Build, Artifact Registry, Anthropic API, Docker',
     image: 'transcom1.png',
-    images: ['transcom1.png'],
+    images: ['transcom1.png', 'transcom-architecture.png'],
     video: 'https://storage.googleapis.com/temp-public-sharing/Transcom%20Hackathon%20intro%20(3).mp4',
     order: 2,
     siteLink: null,
@@ -36,6 +37,7 @@ export const projects = [
     tags: ['Fullstack', 'Cloud'],
     featured: true,
     hackathon: { place: 3 },
+    role: 'Project founder and top contributor (24 of 63 commits). Built the full-stack deployment gateway from scratch (FastAPI + React + Terraform), the admin panel with policy management and audit logging, partner brand checking via HTML scraping, billing dashboard, and GCP infrastructure configuration. Team of 7.',
   },
   {
     title: 'AIX Token Season 2 Dashboard',
