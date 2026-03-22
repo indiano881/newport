@@ -6,7 +6,7 @@ export default defineNuxtConfig({
   css: ['@/assets/css/main.css'],
   app: {
     head: {
-      title: 'Davide Baldi — Cloud-Native Fullstack & Analytics Engineer',
+      title: 'Davide Baldi - Analytics & Data Platform Engineer',
       link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }],
       script: [
         {

@@ -14,8 +14,8 @@ import CertificationsC from './CertificationsC.vue'
       />
     </div>
     <p class="mb-6 text-lg leading-relaxed text-black">
-      Hi, I'm <strong>Davide Baldi</strong> — a
-      <strong>fullstack developer and cloud engineer</strong> based in
+      Hi, I'm <strong>Davide Baldi</strong> - a
+      <strong>Analytics & Data Platform Engineer</strong> based in
       Stockholm, Sweden. I work across the entire stack: from building
       responsive web platforms with modern JavaScript frameworks, to designing
       cloud infrastructure, data pipelines, and DevOps automation on GCP and
@@ -24,7 +24,7 @@ import CertificationsC from './CertificationsC.vue'
 
     <p class="mb-6 text-lg leading-relaxed text-black">
       Before moving into tech, I spent several years in the restaurant industry
-      — a high-pressure environment that taught me how to stay calm under
+      - a high-pressure environment that taught me how to stay calm under
       deadlines, lead teams, and solve problems on the fly. In 2022 I made a
       deliberate career switch into software engineering, and that background
       gives me an edge: I ramp up fast, communicate clearly with non-technical
@@ -68,12 +68,14 @@ import CertificationsC from './CertificationsC.vue'
     <h2 class="text-2xl font-semibold mt-12 mb-4 text-black">How I Work</h2>
 
     <p class="mb-6 text-lg leading-relaxed text-black">
-      I approach every project with an architecture-first mindset — defining
+      I approach every project with an architecture-first mindset - defining
       clear boundaries between services, choosing the right data layer for the
       workload, and building with observability from day one. I value clean
-      abstractions, automated testing, and shipping iteratively. When I join a
-      team, I look for opportunities to mentor junior developers, improve
-      documentation, and reduce friction in the development workflow.
+      abstractions, automated testing, and shipping iteratively. I'm also
+      co-founder of <strong>Bonsai</strong>, a hackathon team that consistently
+      places in competitions - building high-impact prototypes under pressure.
+      When I join a team, I look for opportunities to mentor junior developers,
+      improve documentation, and reduce friction in the development workflow.
     </p>
 
     <p class="mb-6 text-lg leading-relaxed text-black">

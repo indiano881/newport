@@ -5,11 +5,32 @@
       <p class="text-lg text-gray-600 italic">{{ project.subtitle }}</p>
     </div>
 
+    <!-- Images -->
+    <div v-if="project.images && project.images.length > 1" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <img
+        v-for="img in project.images"
+        :key="img"
+        :src="`/projects/${img}`"
+        :alt="project.title"
+        class="w-full rounded-lg shadow-lg object-cover border-black border-2"
+      />
+    </div>
     <img
-      :src="project.image"
+      v-else
+      :src="`/projects/${project.image}`"
       :alt="project.title"
       class="w-full rounded-lg shadow-lg object-cover border-black border-2"
     />
+
+    <!-- Video -->
+    <div v-if="project.video" class="aspect-video w-full">
+      <iframe
+        :src="project.video"
+        class="w-full h-full rounded-lg shadow-lg border-black border-2"
+        allow="autoplay; encrypted-media"
+        allowfullscreen
+      ></iframe>
+    </div>
 
     <div class="space-y-4">
       <h3 class="text-2xl font-semibold text-black">Description</h3>
@@ -31,6 +52,7 @@
 
       <div class="flex space-x-6 pt-4">
         <a
+          v-if="project.siteLink"
           :href="project.siteLink"
           target="_blank"
           class="text-blue-600 underline hover:text-blue-800"
@@ -38,6 +60,7 @@
           Live Site
         </a>
         <a
+          v-if="project.githubLink"
           :href="project.githubLink"
           target="_blank"
           class="text-blue-600 underline hover:text-blue-800"

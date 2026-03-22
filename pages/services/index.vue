@@ -109,7 +109,7 @@ const handleSubmit = async (e) => {
         Book a Free Intro Call
       </h2>
       <p class="text-gray-600 mb-6 text-center max-w-lg">
-        Let's chat about your needs — 15 minutes, free, no commitment.
+        Let's chat about your needs - 15 minutes, free, no commitment.
       </p>
       <a
         href="https://calendly.com/d-baldi88/30min"

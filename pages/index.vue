@@ -52,7 +52,7 @@
       <div class="flex flex-col space-y-4 max-w-2xl">
         <p class="text-3xl font-bold text-black">Davide Baldi</p>
         <p class="text-xl text-black">
-          Cloud-Native Fullstack & Analytics Engineer
+          Analytics & Data Platform Engineer
         </p>
         <p
           class="bg-white text-black px-4 py-2 rounded-md text-2xl border-black border-2"
@@ -124,7 +124,7 @@
           <h3 class="text-xl font-semibold text-black mb-3">Web Platforms</h3>
           <p class="text-base leading-relaxed text-black">
             Modern fullstack applications with Vue, React, Nuxt, and Next.js.
-            Server-side rendering, static generation, and API design — built for
+            Server-side rendering, static generation, and API design - built for
             performance and maintainability.
           </p>
         </div>
@@ -137,7 +137,7 @@
             Cloud & Infrastructure
           </h3>
           <p class="text-base leading-relaxed text-black">
-            GCP and AWS architecture — compute, storage, networking, and
+            GCP and AWS architecture - compute, storage, networking, and
             serverless. Infrastructure as Code with Terraform, container
             orchestration with Kubernetes and Docker.
           </p>

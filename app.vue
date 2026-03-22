@@ -8,8 +8,8 @@
 </template>
 <script setup lang="ts">
 useSeoMeta({
-  title: 'Davide Baldi — Cloud-Native Fullstack & Analytics Engineer',
-  ogTitle: 'Davide Baldi — Cloud-Native Fullstack & Analytics Engineer',
+  title: 'Davide Baldi - Analytics & Data Platform Engineer',
+  ogTitle: 'Davide Baldi - Analytics & Data Platform Engineer',
   description:
     'GCP-certified fullstack and cloud engineer building web platforms, cloud infrastructure, and data pipelines. Based in Stockholm.',
   ogDescription:

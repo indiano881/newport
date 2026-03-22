@@ -29,11 +29,11 @@ No linter or test runner is configured.
 - `/services` — Consulting, teaching, and mentoring offerings
 - `/contact` — Contact form (Formspree)
 
-**Data layer:** Content is driven by plain JS arrays in `utils/` — `data.js` (projects), `certification.js` (certs), `testimonials.js` (testimonials), `services.js` (service offerings). Update these files to add/edit content.
+**Data layer:** Content is driven by plain JS arrays in `utils/` — `data.js` (projects), `certification.js` (certs), `testimonials.js` (testimonials), `services.js` (service offerings). Update these files to add/edit content. Project objects have `tags` (array of strings for tab filtering), `featured` (boolean, shown in "Top" tab), and `hackathon` (object with `name`/`placement` or null, renders a badge on the card).
 
 **Layout:** Single default layout (`layouts/default.vue`) renders `NavigationMenu` above every page.
 
-**Components:** `components/` contains shared UI (NavigationMenu, ProjectsDisplay, ProjectC, MyStory, CertificationsC). Nuxt auto-imports them.
+**Components:** `components/` contains shared UI (NavigationMenu, ProjectsDisplay, ProjectC, ProjectTabs, MyStory, CertificationsC). Nuxt auto-imports them. `ProjectTabs` provides tag-based filtering on the projects page (All / Top / per-tag).
 
 **Styling:** Mix of Tailwind utility classes and `<style scoped>` blocks. Font is "Outfit" from Google Fonts (imported in `assets/css/main.css`). Color palette uses inline Tailwind bracket notation (e.g., `bg-[#eacbd1]`). Nuxt modules: `@nuxt/image` (use `<NuxtImg>` for images), `@nuxtjs/tailwindcss`, `@nuxt/icon`.
 

@@ -42,7 +42,7 @@ export const certifications = [
     expiration: '',
     link: 'https://www.credly.com/badges/2ccf159d-312a-4d7b-8cec-cb2cbf050567/public_url',
     description:
-      'Infrastructure as Code with Terraform — provisioning, state management, modules, and multi-cloud workflows.',
+      'Infrastructure as Code with Terraform - provisioning, state management, modules, and multi-cloud workflows.',
     inProgress: false,
   },
   {
