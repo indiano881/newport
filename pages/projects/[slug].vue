@@ -12,16 +12,33 @@
         :key="img"
         :src="`/projects/${img}`"
         :alt="project.title"
-        class="w-full rounded-lg shadow-lg object-cover border-black border-2"
+        class="w-full rounded-lg shadow-lg object-cover border-black border-2 cursor-zoom-in"
         :class="{ 'md:col-span-2': project.images.length % 2 !== 0 && i === project.images.length - 1 }"
+        @click="zoomedImage = `/projects/${img}`"
       />
     </div>
     <img
       v-else
       :src="`/projects/${project.image}`"
       :alt="project.title"
-      class="w-full rounded-lg shadow-lg object-cover border-black border-2"
+      class="w-full rounded-lg shadow-lg object-cover border-black border-2 cursor-zoom-in"
+      @click="zoomedImage = `/projects/${project.image}`"
     />
+
+    <!-- Lightbox -->
+    <Teleport to="body">
+      <div
+        v-if="zoomedImage"
+        class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 cursor-zoom-out"
+        @click="zoomedImage = null"
+      >
+        <img
+          :src="zoomedImage"
+          :alt="project.title"
+          class="max-w-[90vw] max-h-[90vh] rounded-lg shadow-2xl object-contain"
+        />
+      </div>
+    </Teleport>
 
     <!-- Video -->
     <div v-if="project.video" class="aspect-video w-full">
@@ -100,10 +117,11 @@
 
 <script setup>
 import { useRoute } from 'vue-router'
-import { computed } from 'vue'
+import { ref, computed } from 'vue'
 import { projects } from '@/utils/data.js'
 
 const route = useRoute()
+const zoomedImage = ref(null)
 
 const project = computed(() => {
   const slug = route.params.slug
